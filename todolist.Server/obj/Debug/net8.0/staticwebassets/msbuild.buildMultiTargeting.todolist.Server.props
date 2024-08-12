@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\todolist.Server.props" />
+</Project>

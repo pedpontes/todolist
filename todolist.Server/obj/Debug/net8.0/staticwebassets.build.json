@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "qp9dd5gNn1L8HxCGGJHoscwgBANUT+mGc+7x+orMsqM=",
+  "Source": "todolist.Server",
+  "BasePath": "_content/todolist.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Pedro Pontes\\source\\repos\\todolist\\todolist.client\\todolist.client.esproj",
+      "Version": 2,
+      "Source": "todolist.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
