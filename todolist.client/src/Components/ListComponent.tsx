@@ -1,6 +1,6 @@
 import { ToDoList, DellItem } from "../App.tsx"
 
-function ListComponent({ List }: { List: ToDoList[] }) {
+function ListComponent( { List } : { List: ToDoList[] }) {
   return (
       <div>
           <table>
