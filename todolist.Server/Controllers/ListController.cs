@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using todolist.Server.Data;
 using todolist.Server.Models;
 
 namespace todolist.Server.Controllers
 {
     [ApiController]
+    [Route("api/[controller]")]
     public class ListController : ControllerBase
     {
         private readonly ToDoListDbContext _context;
@@ -13,29 +15,36 @@ namespace todolist.Server.Controllers
             _context = context;
         }
 
-        [Route("api/todolist")]
         [HttpGet]
-        public IActionResult GetToDoList()
-        {
-            return Ok();
+        public IActionResult Get() {
+        
+            var result = _context.ItemList;
+            return new JsonResult(result);
         }
 
-        [Route("api/appendlist")]
         [HttpPost]
-        public IActionResult AppendList([FromBody] ItemList Item)
+        public IActionResult Post([FromBody] ItemList Item)
         {
-            if (Item == null || Item.Title == "" || Item.Description == "") return BadRequest();
-            Console.WriteLine(Item.Title + Item.Description);
+            if (string.IsNullOrEmpty(Item.Title) || string.IsNullOrEmpty(Item.Description)) return StatusCode(400);
             try {
 
-                var result = _context.ItemList.Add(Item);
-
+                _context.ItemList.Add(Item);
                 _context.SaveChanges();
-                return Ok();
+
+                return StatusCode(200);
             }
-            catch (OperationCanceledException) { 
+            catch (DbUpdateException) { 
                 throw;
             }
+        }
+
+        [Route("{id}")]
+        [HttpDelete]
+        public IActionResult Delete(int id) {
+
+            var result = _context.ItemList.Where(x => x.Id == id).ExecuteDelete();
+            if (result == 0) return StatusCode(404);
+            return StatusCode(200);
         }
     }
 }
