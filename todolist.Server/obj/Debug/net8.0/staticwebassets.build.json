@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qp9dd5gNn1L8HxCGGJHoscwgBANUT+mGc+7x+orMsqM=",
+  "Hash": "L6jq4DcT10LwazuPBTwsnT1PA2Hc7GBdQuPj2F6OGYQ=",
   "Source": "todolist.Server",
   "BasePath": "_content/todolist.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "todolist.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],

@@ -1,4 +1,16 @@
-import { ToDoList, DellItem } from "../App.tsx"
+import { ToDoList } from "../App.tsx"
+
+const DellItem = async (id: number) => {
+    if (id == null) return;
+
+    try {
+        await fetch(`api/list/${id}`, {
+            method: "DELETE"
+        });
+    } catch (error) {
+        throw new Error("Erro: " + error);
+    }
+}
 
 function ListComponent( { List } : { List: ToDoList[] }) {
   return (
