@@ -11,8 +11,8 @@ using todolist.Server.Data;
 namespace todolist.Server.Migrations
 {
     [DbContext(typeof(ToDoListDbContext))]
-    [Migration("20240819020104_init")]
-    partial class init
+    [Migration("20240819090425_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -19,9 +19,9 @@ function FormAddComponent() {
             setTitle("");
             setDescription("");
 
-            if (status != 200) return alert("Erro ao adicionar item na lista.");
+            if (status != 200) return document.location.reload();
 
-            return alert("Item adicionado na lista.")
+            return document.location.reload();
 
         } catch (error) {
             throw new Error("Erro: " + error)
